@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #0d0c22;
+    color: #d1d5db;
+}
+.hackathon-bg {
+    background-image: 
+        linear-gradient(rgba(13, 12, 34, 0.95), rgba(13, 12, 34, 0.95)),
+        radial-gradient(ellipse at center, rgba(118, 7, 153, 0.2) 0%, rgba(13, 12, 34, 0) 70%);
+    background-size: cover;
+}
+.glass-card {
+    background: rgba(23, 23, 45, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(118, 7, 153, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.glass-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(236, 72, 153, 0.3);
+    transform: translateY(-4px);
+    border-color: rgba(236, 72, 153, 0.5);
+}
+.neon-glow {
+    transition: all 0.3s ease;
+}
+.neon-glow:hover {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.6);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+.animated-pulse {
+     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #f472b6 #0d0c22;
+}
+.scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #f472b6;
+    border-radius: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: transparent;
+}
